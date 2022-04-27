@@ -1,0 +1,27 @@
+{
+  "name": "mobx-like-dva",
+  "version": "1.0.0",
+  "description": "mobx",
+  "main": "dist/index.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "mobx",
+    "react"
+  ],
+  "author": "lw",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "mobx": "^6.5.0",
+    "rollup": "^2.70.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "typescript": "^4.6.3"
+  }
+}
