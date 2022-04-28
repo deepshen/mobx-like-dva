@@ -29,7 +29,7 @@
     // 生成定义文件
     "declarationMap": false,
     // 生成定义sourceMap
-    "declarationDir": "./lib/types",
+    "declarationDir": "./lib/types",  // rollup没用不管  tsc -b使用
     // 定义文件输出目录
 
 
