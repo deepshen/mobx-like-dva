@@ -1,8 +1,8 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('mobx')) :
-	typeof define === 'function' && define.amd ? define(['exports', 'mobx'], factory) :
-	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.mobxDva = {}, global.mobx));
-})(this, (function (exports, mobx) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('mobx')) :
+	typeof define === 'function' && define.amd ? define(['mobx'], factory) :
+	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.mobxDva = factory(global.mobx));
+})(this, (function (mobx) { 'use strict';
 
 	class Store {
 	    state = {};
@@ -36,10 +36,7 @@
 	        mobx.makeAutoObservable(this);
 	    }
 	}
-	const store = new Store();
 
-	exports.store = store;
-
-	Object.defineProperty(exports, '__esModule', { value: true });
+	return Store;
 
 }));

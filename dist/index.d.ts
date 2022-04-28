@@ -29,4 +29,12 @@ export interface StoreIns {
     dispatch: (val: dispatchProps) => void;
     [key: string]: any;
 }
-export declare const store: StoreIns;
+declare class Store implements StoreIns {
+    state: any;
+    init(models: Model[]): void;
+    getState: () => any;
+    update: (props: UpdateProps) => void;
+    dispatch: ({ type, payload }: dispatchProps) => void;
+    constructor();
+}
+export default Store;

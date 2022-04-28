@@ -60,5 +60,7 @@ class Store implements StoreIns{
 		makeAutoObservable(this)
 	}
 }
-export const store:StoreIns = new Store()
+
+export default Store
+
 
