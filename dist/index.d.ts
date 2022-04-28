@@ -18,11 +18,8 @@ export interface dispatchProps {
     } | string | number;
 }
 export interface StoreIns {
-    state: {
-        [key: string]: any;
-    };
     init: (models: Model[]) => void;
-    getState: () => ({
+    getState: (name?: string) => ({
         [key: string]: any;
     });
     update: (val: UpdateProps) => void;
@@ -30,9 +27,9 @@ export interface StoreIns {
     [key: string]: any;
 }
 declare class Store implements StoreIns {
-    state: any;
+    private state;
     init(models: Model[]): void;
-    getState: () => any;
+    getState: (name: string | undefined) => any;
     update: (props: UpdateProps) => void;
     dispatch: ({ type, payload }: dispatchProps) => void;
     constructor();

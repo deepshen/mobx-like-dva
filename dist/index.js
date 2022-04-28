@@ -18,8 +18,11 @@
 	            return item;
 	        });
 	    }
-	    getState = () => {
-	        return this.state;
+	    getState = (name) => {
+	        if (name) {
+	            return this.state[name] || {};
+	        }
+	        return this.state || {};
 	    };
 	    update = (props) => {
 	        const { name, payload = {} } = props || {};

@@ -19,9 +19,9 @@ export interface dispatchProps{
 }
 
 export interface StoreIns{
-	state: {[key:string]:any},
+	// state: {[key:string]:any},
 	init: (models:Model[]) => void,
-		getState: () => ({[key:string]:any}),
+	getState: (name?:string) => ({[key:string]:any}),
 	update: (val:UpdateProps) => void,
 		dispatch: (val:dispatchProps) => void,
 		[key:string]:any
@@ -29,7 +29,7 @@ export interface StoreIns{
 
 
 class Store implements StoreIns{
-	state:any={}
+	private state:any={}
 	init(models:Model[]){
 		let _this:StoreIns = this
 		models.map((item:Model) => {
@@ -42,8 +42,11 @@ class Store implements StoreIns{
 			return item
 		})
 	}
-	getState=() => {
-		return this.state
+	getState=(name:string | undefined) => {
+		if(name){
+			return this.state[name] || {}
+		}
+		return this.state || {}
 	}
 	update=(props:UpdateProps)=>{
 		const {name,payload={}} = props || {}

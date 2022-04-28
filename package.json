@@ -1,9 +1,9 @@
 {
   "name": "mobx-like-dva",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "mobx",
   "main": "dist/index.js",
-  "files": ["dist"],
+  "files": ["dist","README.md"],
   "scripts": {
     "build": "rollup -c"
   },
