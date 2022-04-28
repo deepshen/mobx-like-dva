@@ -7,6 +7,9 @@
   "scripts": {
     "build": "rollup -c"
   },
+  "bugs": {
+    "url": "https://github.com/deepshen/mobx-like-dva/issues"
+  },
   "keywords": [
     "mobx",
     "react"
