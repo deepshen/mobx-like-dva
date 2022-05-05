@@ -5,9 +5,8 @@ import store from '../store'
 
 const Hello = () => {
 	const {getState,update,dispatch} = store
-	const state = getState()
-	const {hello} = state
-	const {name} = hello
+	const state = getState('hello')
+	const {name} = state
 
 	const handleChange = () => {
 		update({

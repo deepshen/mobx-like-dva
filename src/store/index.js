@@ -1,4 +1,4 @@
-import Store from '../../lib/index'
+import Store from '../../index'
 
 import hello from './hello.model'
 
